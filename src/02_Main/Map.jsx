@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { markerGeopin } from "./assets/icons_marker/markerGeopin";
-import { markerFolder } from "./assets/icons_marker/markerFolder";
+import { markerGeopin } from "../assets/icons_marker/markerGeopin";
+import { markerFolder } from "../assets/icons_marker/markerFolder";
 
 export function Map() {
   const [position] = useState({
@@ -10,7 +10,7 @@ export function Map() {
   });
 
   return (
-    <>
+    <div className="container">
       <MapContainer
         id="map"
         center={position.iglobe}
@@ -28,6 +28,6 @@ export function Map() {
           <Popup>Welkom by iGlobe, jou pragtige bliksem, jy</Popup>
         </Marker>
       </MapContainer>
-    </>
+    </div>
   );
 }
